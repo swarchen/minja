@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> MINJA :: 輕鬆打造您的messenger機器人</title>
+    <meta name="description" content="MINJA是一個針對facebook messenger platform所開發的服務，讓你不用懂一行程式，也能夠打造屬於自己的messenger機器人">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta itemprop="name" content="MINJA :: 輕鬆打造您的messenger機器人"/>
+	<meta itemprop="description" content="MINJA是一個針對facebook messenger platform所開發的服務，讓你不用懂一行程式，也能夠打造屬於自己的messenger機器人"/>
+	<meta itemprop="image" content="http://i.imgur.com/c8goJds.png"/>
+	<meta property="og:title" content="MINJA :: 輕鬆打造您的messenger機器人"/>
+	<meta property="og:image" content="http://i.imgur.com/c8goJds.png"/>
+	<meta property="og:url" content="http://minja.s3-website-us-west-2.amazonaws.com/"/>
+	<meta property="og:site_name" content="MINJA"/>
+	<meta property="og:description" content="MINJA是一個針對facebook messenger platform所開發的服務，讓你不用懂一行程式，也能夠打造屬於自己的messenger機器人"/>
+	<meta property="og:type" content="website"/>
+
+	<meta name="twitter:title" content="MINJA :: 輕鬆打造您的messenger機器人" />
+
+	<link rel="icon" 
+      type="image/png" 
+      href="img/logo.png" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+
+<body ng-app="minja">
+    <div class="wrap" ng-controller="MyCtrl" id="container">
+        <nav du-scroll-container="container">
+            <ul>
+            	<li class="logo"><img src="img/logo.png" class="img-responsive" alt=""></li>
+                <li><a ng-click="toStep1()" du-smooth-scroll du-scrollspy>Step 1</a></li>
+                <li><a ng-click="toStep2()" du-smooth-scroll du-scrollspy>Step 2</a></li>
+                <li><a ng-click="toStep3()" du-smooth-scroll du-scrollspy>Step 3</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="row">
+                <div class="col-md-5 col-lg-5 col-sm-12 vcenter">
+                    <img src="img/bot.png" class="img-responsive" alt="">
+                </div><!--
+    --><div class="col-md-7 col-lg-7 col-sm-12 vcenter">
+                    <h2>輕鬆打造您的messenger機器人</h2>
+                    <p>  MINJA是一個針對facebook messenger platform所開發的服務，讓你不用懂一行程式，也能夠打造屬於自己的messenger機器人，不論你是粉專電商或者是網路名人，都能夠輕鬆的透過messenger機器人和粉絲互動，讓你從此不必再煩惱錯過粉絲的訊息。</p>
+                    <p><a href="https://swarchen.typeform.com/to/f1WsIJ" class="btnn">預訂服務</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="step-1">
+            <div class="row">
+                <div class="col-md-5 col-lg-5 col-sm-12 vcenter">
+                    <img src="img/fanpage.png" class="img-responsive" alt="">
+                </div><!--
+    --><div class="col-md-7 col-lg-7 col-sm-12 vcenter">
+                    <h2>STEP 1:授權您的粉絲專頁</h2>
+                    <p>  透過授權您的粉絲專頁，申請MINJA的GUI機器人介面，就可以開始設計您的聊天機器人囉！</p>
+                </div>
+            </div>
+        </section>
+        <section id="step-2">
+            <div class="row">
+                <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 input vcenter">
+                <p class="warning" ng-show="unfill">請設定完所有的訊息唷！</p>
+                <form class="edit">
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">輸入歡迎詞</label>
+				    <input type="text" class="form-control" placeholder="ex.嗨！別忘了幫我們按讚喔！" ng-model="welcome">
+				  </div>
+				</form>
+				<form class="edit">
+				  <div class="form-group">
+                            <label for="exampleInputName2">當使用者輸入</label>
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder="ex.可以退貨嗎" ng-model="input1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">機器人回覆文字</label>
+                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="ex.7天內都可以喔！" ng-model="reply1">
+                        </div>
+				</form>
+				<form class="edit">
+				  <div class="form-group">
+                            <label for="exampleInputName2">當使用者輸入</label>
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder="ex.go shopping" ng-model="input2">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">機器人回覆網址</label>
+                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="ex.http://yourpage.com" ng-model="reply2">
+                        </div>
+				</form>
+                </div><!--
+    --><div class="col-md-7 col-lg-7 col-sm-12 vcenter">
+                    <h2>STEP 2:設定messenger機器人</h2>
+                    <p>  透過圖形化的介面去管理、編輯您的粉絲專頁聊天機器人，您可以建立歡迎訊息吸引您的使用者，也可以設計和使用者互動的對話，一切只需要透過MINJA就可以輕鬆搞定！</p>
+                </div>
+            </div>
+        </section>
+        <section id="step-3">
+            <div class="row">
+                <div class="col-md-5 col-lg-5 col-sm-12 chatarea vcenter ">
+                    <input type="text" class="msg-input" placeholder="傳訊息給粉絲專頁" ng-model="inputText" ng-enter="sendMsg()">
+                    <img src="img/chatarea.png" class="img-responsive chat-image" alt="">
+                    <div class="msg-show">
+                        <div class="content row" id="msgContent" scroll-glue>
+                            <div class="msg col-md-12"><span class="msg-left">直接跟我互動一下吧</span></div>
+                            <div class="msg col-md-12"><span class="msg-right">這是您的訊息</span></div>
+                            <div class="msg col-md-12"><span class="msg-left">開始吧！</span></div>
+                        </div>
+                    </div>
+                </div><!--
+    		--><div class="col-md-7 col-lg-7 col-sm-12 vcenter">
+                    <h2>STEP 3:立即體驗結果！</h2>
+                    <p>  試著輸入您剛剛所設定的對話，體驗MINJA聊天機器人的威力吧！</p>
+                    <p ><a href="https://swarchen.typeform.com/to/f1WsIJ" class="btnn">立即預訂</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-scroll/angular-scroll.min.js"></script>
+    <script src="node_modules/angularjs-scroll-glue/src/scrollglue.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70280709-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

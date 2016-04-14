@@ -1,0 +1,6 @@
+scss/*.scss
+scss/base/*.scss
+scss/utilitied/*.scss
+node_modules/*
+bower_components/*
+svg_file/*
