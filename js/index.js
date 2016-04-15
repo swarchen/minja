@@ -21,6 +21,11 @@
         var step3 = angular.element(document.getElementById('step-3'));
         $scope.unfill = 0;
         $scope.typeIn = 0;
+        $scope.welcome = 'MINJA！，互動訊息都可編輯喔！';
+        $scope.input1 = '可以退貨嗎';
+        $scope.reply1 = '7天內都可以喔！';
+        $scope.input2 = 'go shopping';
+        $scope.reply2 = 'https://www.facebook.com';
         $scope.sendMsg = function(){
         	var myEl = angular.element( document.getElementById( 'msgContent' ) );
      		myEl.append('<div class="msg col-md-12"><span class="msg-right">'+$scope.inputText+'</span></div>');   

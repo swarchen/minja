@@ -11,7 +11,7 @@
 	<meta itemprop="image" content="http://i.imgur.com/c8goJds.png"/>
 	<meta property="og:title" content="MINJA :: 輕鬆打造您的messenger機器人"/>
 	<meta property="og:image" content="http://i.imgur.com/c8goJds.png"/>
-	<meta property="og:url" content="http://minja.s3-website-us-west-2.amazonaws.com/"/>
+	<meta property="og:url" content="http://www.minja.today"/>
 	<meta property="og:site_name" content="MINJA"/>
 	<meta property="og:description" content="MINJA是一個針對facebook messenger platform所開發的服務，讓你不用懂一行程式，也能夠打造屬於自己的messenger機器人"/>
 	<meta property="og:type" content="website"/>
@@ -66,27 +66,27 @@
                 <form class="edit">
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">輸入歡迎詞</label>
-				    <input type="text" class="form-control" placeholder="ex.嗨！別忘了幫我們按讚喔！" ng-model="welcome">
+				    <input type="text" class="form-control" placeholder="MINJA！，互動訊息都可編輯喔！" ng-model="welcome">
 				  </div>
 				</form>
 				<form class="edit">
 				  <div class="form-group">
                             <label for="exampleInputName2">當使用者輸入</label>
-                            <input type="text" class="form-control" id="exampleInputName2" placeholder="ex.可以退貨嗎" ng-model="input1">
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder='可以退貨嗎？' ng-model="input1">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail2">機器人回覆文字</label>
-                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="ex.7天內都可以喔！" ng-model="reply1">
+                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="7天內都可以喔！" ng-model="reply1">
                         </div>
 				</form>
 				<form class="edit">
 				  <div class="form-group">
                             <label for="exampleInputName2">當使用者輸入</label>
-                            <input type="text" class="form-control" id="exampleInputName2" placeholder="ex.go shopping" ng-model="input2">
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder="go shopping" ng-model="input2">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail2">機器人回覆網址</label>
-                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="ex.http://yourpage.com" ng-model="reply2">
+                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="https://www.facebook.com" ng-model="reply2">
                         </div>
 				</form>
                 </div><!--
@@ -101,6 +101,7 @@
                 <div class="col-md-5 col-lg-5 col-sm-12 chatarea vcenter ">
                     <input type="text" class="msg-input" placeholder="傳訊息給粉絲專頁" ng-model="inputText" ng-enter="sendMsg()">
                     <img src="img/chatarea.png" class="img-responsive chat-image" alt="">
+                    <img class="try" src="img/try.png" alt="" ng-hide="typeIn">
                     <div class="msg-show">
                         <div class="content row" id="msgContent" scroll-glue>
                             <div class="msg col-md-12"><span class="msg-left">直接跟我互動一下吧</span></div>
@@ -132,6 +133,15 @@
   ga('create', 'UA-70280709-4', 'auto');
   ga('send', 'pageview');
 
+</script>
+<script type="text/javascript">
+var _mfq = _mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.async = true;
+    mf.src = "//cdn.mouseflow.com/projects/9319eb31-8b80-434f-ae6a-b75871048dc1.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
 </script>
 </body>
 
